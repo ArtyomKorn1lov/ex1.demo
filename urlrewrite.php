@@ -1,5 +1,13 @@
 <?php
 $arUrlRewrite=array (
+  3 => 
+  array (
+    'CONDITION' => '#^/testovyy-razdel/#',
+    'RULE' => '',
+    'ID' => 'bitrix:news',
+    'PATH' => '/testovyy-razdel/index.php',
+    'SORT' => 100,
+  ),
   0 => 
   array (
     'CONDITION' => '#^/services/#',
