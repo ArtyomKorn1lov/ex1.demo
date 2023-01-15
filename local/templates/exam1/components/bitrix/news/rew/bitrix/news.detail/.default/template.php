@@ -47,7 +47,7 @@ $this->setFrameMode(true);
             <? endif; ?>
         </div>
     </div>
-    <div class="exam-review-doc">
+    <!--<div class="exam-review-doc">
         <p>Документы:</p>
         <div class="exam-review-item-doc"><img class="rew-doc-ico" src="./img/icons/pdf_ico_40.png"><a href="">Файл
                 1</a></div>
@@ -56,6 +56,6 @@ $this->setFrameMode(true);
         <div class="exam-review-item-doc"><img class="rew-doc-ico" src="./img/icons/pdf_ico_40.png"><a href="">Файл
                 3</a></div>
     </div>
-    <hr>
+    <hr>-->
     <a href="<?= $arResult["LIST_PAGE_URL"] ?>" class="review-block_back_link"> &larr; К списку отзывов</a>
 </div>
