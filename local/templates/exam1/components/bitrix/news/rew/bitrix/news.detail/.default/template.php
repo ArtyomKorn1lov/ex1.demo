@@ -47,6 +47,8 @@ $this->setFrameMode(true);
             <? endif; ?>
         </div>
     </div>
+
+    <? //dump(CIBlockElement::GetProperty($arResult["IBLOCK_ID"], $arResult["PROPERTIES"]["DOCUMENTS"]["ID"])) ?>
     <!--<div class="exam-review-doc">
         <p>Документы:</p>
         <div class="exam-review-item-doc"><img class="rew-doc-ico" src="./img/icons/pdf_ico_40.png"><a href="">Файл

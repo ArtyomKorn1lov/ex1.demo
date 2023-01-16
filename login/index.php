@@ -8,8 +8,15 @@ if (is_string($_REQUEST["backurl"]) && mb_strpos($_REQUEST["backurl"], "/") === 
 }
 
 $APPLICATION->SetTitle("Вход на сайт");
-?>
-<p>Вы зарегистрированы и успешно авторизовались.</p>
-
-<p><a href="<?=SITE_DIR?>">Вернуться на главную страницу</a></p>
-<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+?><?$APPLICATION->IncludeComponent(
+	"bitrix:system.auth.form", 
+	"demo", 
+	array(
+		"COMPONENT_TEMPLATE" => "demo",
+		"FORGOT_PASSWORD_URL" => "",
+		"PROFILE_URL" => "/login/user.php",
+		"REGISTER_URL" => "/register/",
+		"SHOW_ERRORS" => "N"
+	),
+	false
+);?><br><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
