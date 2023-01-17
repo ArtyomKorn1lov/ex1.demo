@@ -71,7 +71,7 @@ if ($arResult["FORM_TYPE"] == "login") {
                 <a href="<?= $arResult["PROFILE_URL"] ?>"><?= $arResult["USER_NAME"] ?> [<?= $arResult["USER_LOGIN"] ?>
                     ]</a>
             </li>
-            <li><a href="<?= $APPLICATION->GetCurPageParam("logout=yes", array(
+            <li><a href="<?= $APPLICATION->GetCurPageParam("logout=yes&".bitrix_sessid_get(), array(
                     "login",
                     "logout",
                     "register",

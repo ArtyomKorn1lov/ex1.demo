@@ -48,16 +48,16 @@ $this->setFrameMode(true);
         </div>
     </div>
 
-    <? //dump(CIBlockElement::GetProperty($arResult["IBLOCK_ID"], $arResult["PROPERTIES"]["DOCUMENTS"]["ID"])) ?>
-    <!--<div class="exam-review-doc">
+    <? //dump($arResult["DISPLAY_PROPERTIES"]["DOCUMENTS"]["FILE_VALUE"]) ?>
+
+    <div class="exam-review-doc">
         <p>Документы:</p>
-        <div class="exam-review-item-doc"><img class="rew-doc-ico" src="./img/icons/pdf_ico_40.png"><a href="">Файл
-                1</a></div>
-        <div class="exam-review-item-doc"><img class="rew-doc-ico" src="./img/icons/pdf_ico_40.png"><a href="">Файл
-                2</a></div>
-        <div class="exam-review-item-doc"><img class="rew-doc-ico" src="./img/icons/pdf_ico_40.png"><a href="">Файл
-                3</a></div>
+        <? foreach ($arResult["DISPLAY_PROPERTIES"]["DOCUMENTS"]["FILE_VALUE"] as $pid => $arProperty): ?>
+            <div class="exam-review-item-doc"><img class="rew-doc-ico"
+                                                   src="<?= SITE_TEMPLATE_PATH ?>/img/icons/pdf_ico_40.png">
+                <a href="<?= $arProperty['SRC'] ?>"><?= $arProperty["ORIGINAL_NAME"] ?></a></div>
+        <? endforeach ?>
     </div>
-    <hr>-->
+    <hr>
     <a href="<?= $arResult["LIST_PAGE_URL"] ?>" class="review-block_back_link"> &larr; К списку отзывов</a>
 </div>
